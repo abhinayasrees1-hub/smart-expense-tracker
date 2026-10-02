@@ -65,7 +65,7 @@ Authorization:`Bearer ${token}`
 
 
 
-const API="http://localhost:5000/api/expenses";
+const API="https://smart-expense-tracker-backend-8isf.onrender.com/api/expenses";
 
 
 

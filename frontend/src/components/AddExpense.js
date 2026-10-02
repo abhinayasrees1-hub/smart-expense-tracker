@@ -17,7 +17,7 @@ function AddExpense({ refresh }) {
         try {
 
             await axios.post(
-                "http://localhost:5000/api/expenses",
+                "https://smart-expense-tracker-backend-8isf.onrender.com/api/expenses",
                 {
                     title,
                     amount,

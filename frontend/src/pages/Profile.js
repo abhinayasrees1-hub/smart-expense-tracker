@@ -55,7 +55,7 @@ try{
 
 const res = await axios.get(
 
-"http://localhost:5000/api/auth/profile",
+"https://smart-expense-tracker-backend-8isf.onrender.com/api/auth/profile",
 
 config
 
@@ -134,7 +134,7 @@ try{
 
 const res = await axios.put(
 
-"http://localhost:5000/api/auth/profile",
+"https://smart-expense-tracker-backend-8isf.onrender.com/api/auth/profile",
 
 {
 
