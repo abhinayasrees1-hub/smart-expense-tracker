@@ -10,6 +10,7 @@ function Register() {
     const navigate = useNavigate();
 
     const handleRegister = async () => {
+        console.log("REGISTER BUTTON CLICKED");
 
         try {
 
