@@ -4,25 +4,38 @@ import { useNavigate } from "react-router-dom";
 
 function Register() {
 
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const navigate = useNavigate();
 
     const handleRegister = async () => {
+
         console.log("REGISTER BUTTON CLICKED");
 
         try {
 
-            await axios.post("https://smart-expense-tracker-backend-8isf.onrender.com/api/auth/register", {
-                email,
-                password
-            });
+            await axios.post(
+                "https://smart-expense-tracker-backend-8isf.onrender.com/api/auth/register",
+                {
+                    name,
+                    email,
+                    password
+                }
+            );
 
+            alert("User Registered Successfully");
             navigate("/login");
 
         } catch (err) {
+
             console.log(err.response?.data || err.message);
+
+            alert(
+                err.response?.data?.message ||
+                "Registration failed"
+            );
         }
     };
 
@@ -33,6 +46,13 @@ function Register() {
             <div className="register-card">
 
                 <h2>Register</h2>
+
+                <input
+                    type="text"
+                    placeholder="Enter Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                />
 
                 <input
                     type="email"
