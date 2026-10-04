@@ -12,7 +12,6 @@ function Register() {
 
     const handleRegister = async () => {
 
-        console.log("REGISTER BUTTON CLICKED");
 
         try {
 
